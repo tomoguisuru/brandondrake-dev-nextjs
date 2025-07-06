@@ -12,12 +12,8 @@ import { usePathname } from 'next/navigation';
 
 const navigationItems = [
   { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
-  { name: 'Work History', href: '/work-history' },
   { name: 'Projects', href: '/projects' },
-  { name: 'Just For Fun', href: '/just-for-fun' },
-  { name: 'Education & Certificates', href: '/education' },
-  { name: 'Links', href: '/links' },
+  { name: 'Contact Me', href: '/contact' },
 ];
 
 export default function Navbar() {

@@ -28,13 +28,13 @@ const socialLinks: SocialLink[] = [
 export default function Links() {
   return (
     <div className="max-w-4xl mx-auto">
-      <h2 className="mb-8 text-center">
+      {/* <h2 className="mb-8 text-center">
         Connect With Me
-      </h2>
+      </h2> */}
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {socialLinks.map((link, index) => (
-          <div key={index} className="card hover:shadow-lg transition-shadow duration-300">
+          <div key={index} className="card">
             <div className="card-body text-center">
               <div className="text-4xl mb-4">{link.icon}</div>
               <h4 className="mb-4 text-gray-700 dark:text-gray-300">
@@ -54,6 +54,7 @@ export default function Links() {
             </div>
           </div>
         ))}
+
       </div>
 
       <div className="card mt-8">
