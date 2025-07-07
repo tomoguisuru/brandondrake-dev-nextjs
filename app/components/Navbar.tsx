@@ -18,23 +18,23 @@ const navigationItems = [
 
 export default function Navbar() {
   // const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  // const [isDarkMode, setIsDarkMode] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
   const pathname = usePathname();
 
   // Handle hydration
   useEffect(() => {
     setIsMounted(true);
-    const theme = localStorage.getItem('theme');
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    // const theme = localStorage.getItem('theme');
+    // const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-    if (theme === 'dark' || (!theme && systemPrefersDark)) {
-      setIsDarkMode(true);
-      document.documentElement.classList.add('dark');
-    } else {
-      setIsDarkMode(false);
-      document.documentElement.classList.remove('dark');
-    }
+    // if (theme === 'dark' || (!theme && systemPrefersDark)) {
+    //   setIsDarkMode(true);
+    //   document.documentElement.classList.add('dark');
+    // } else {
+    //   setIsDarkMode(false);
+    //   document.documentElement.classList.remove('dark');
+    // }
   }, []);
 
   // Toggle Light/Dark Mode
