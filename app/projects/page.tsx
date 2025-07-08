@@ -1,4 +1,4 @@
-import { RocketLaunchIcon } from '@heroicons/react/24/outline';
+import Image from 'next/image';
 
 export default function Projects() {
   return (
@@ -7,16 +7,27 @@ export default function Projects() {
         Projects
       </h2>
 
-      <div className="card max-w-md mx-auto">
-        <div className="card-body flex flex-col items-center py-12">
-          <RocketLaunchIcon className="h-16 w-16 text-blue-600 mb-4" />
-          <h4 className="mb-4 text-gray-700 dark:text-gray-300">
-            Coming Soon
-          </h4>
-          <p className="text-gray-600 dark:text-gray-400">
-            I&apos;m currently working on showcasing my latest projects here.
-            Check back soon to see some exciting work!
-          </p>
+      <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8">
+        A collection of simple applications
+      </p>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16 justify-center text-left">
+        <div className="card card-side bg-base-200 shadow-sm">
+          <figure>
+            <Image
+              src="/projects/movie-app.png"
+              alt="Vite + React + TS + Appwrite"
+              width={200}
+              height={280}
+            />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title">NextJS Movie App</h2>
+            <p>A simple NextJS React application that uses TypeScript with Appwrite & TMDB for data retrieval and storage.</p>
+            <div className="card-actions justify-end">
+              <a href='https://movies.brandondrake.dev' target='_blank' className="link link-primary">View Demo</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
