@@ -22,8 +22,8 @@ export default function Projects() {
             />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">NextJS Movie App</h2>
-            <p>A simple NextJS React application that uses TypeScript with Appwrite & TMDB for data retrieval and storage.</p>
+            <h2 className="card-title">React Movie App</h2>
+            <p>A simple React application that uses Vite, TypeScript, Appwrite & TMDB API.</p>
             <div className="card-actions justify-end">
               <a href='https://movies.brandondrake.dev' target='_blank' className="link link-primary">View Demo</a>
             </div>
