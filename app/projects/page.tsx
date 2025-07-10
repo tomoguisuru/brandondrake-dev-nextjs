@@ -1,6 +1,24 @@
 import Image from 'next/image';
 
 export default function Projects() {
+
+  const projects = [
+    {
+      img: "movie-app.png",
+      alt: "Vite + React + TS + Appwrite",
+      title: "Trending Movies App",
+      description: "A simple React application that uses Vite, TypeScript, Appwrite & TMDB API.",
+      link: "https://movies.brandondrake.dev",
+    },
+    {
+      img: "budget-app.png",
+      alt: "React + TS + Local Store",
+      title: "Budget Tracker",
+      description: "Simple budget app using React + Bootstrap Components to track budget data in local store",
+      link: "https://budget.brandondrake.dev",
+    },
+  ] as const;
+
   return (
     <div className="max-w-4xl mx-auto text-center">
       <h2 className="mb-8">
@@ -11,25 +29,28 @@ export default function Projects() {
         A collection of simple applications
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16 justify-center text-left">
+      {projects.map((project, idx) => (
+        <div key={`project-${idx}`} className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16 justify-center text-left">
         <div className="card card-side bg-base-200 shadow-sm">
           <figure>
             <Image
-              src="/projects/movie-app.png"
-              alt="Vite + React + TS + Appwrite"
+              src={`/projects/${project.img}`}
+              alt={project.alt}
               width={200}
               height={280}
             />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">React Movie App</h2>
-            <p>A simple React application that uses Vite, TypeScript, Appwrite & TMDB API.</p>
+            <h2 className="card-title">{project.title}</h2>
+            <p>{project.description}</p>
             <div className="card-actions justify-end">
-              <a href='https://movies.brandondrake.dev' target='_blank' className="link link-primary">View Demo</a>
+              <a href={project.link} target='_blank' className="link link-primary">View Demo</a>
             </div>
           </div>
         </div>
       </div>
+      ))}
+
     </div>
   );
 }
